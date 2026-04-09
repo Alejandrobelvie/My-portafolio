@@ -2,55 +2,204 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio -  -Desarrollador java 
-    -Estudiante de Ciberseguridad</title>
+  <title>Portafolio - Desarrollador Java - Estudiante de Ciberseguridad</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+    .hero {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 50px 0;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    .card {
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .btn-custom {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border: none;
+      color: white;
+    }
+    .btn-custom:hover {
+      background: linear-gradient(45deg, #764ba2, #667eea);
+      color: white;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #667eea;
+    }
+  </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <header class="text-center">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Alejandro Belvie</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 pt-5">
+    <header id="home" class="hero text-center">
       <h1>Alejandro Belvie</h1>
-      <p>Desarrollador Java</p>
+      <p class="lead">Desarrollador Java</p>
       <p>Estudiante de Ciberseguridad - INACAP (3er año)</p>
     </header>
 
-    <section id="about" class="mt-4">
-      <h2>Sobre mí</h2>
+    <section id="about" class="section">
+      <h2><i class="bi bi-person-circle"></i> Sobre mí</h2>
       <p>Estudiante de Ciberseguridad con bases sólidas en desarrollo Java Full Stack. 
          Experiencia en HTML, CSS, Bootstrap, Python, Java, SQL Server, PostgreSQL. 
          Conocimientos en control de versiones (Git/GitHub) y metodologías ágiles (Scrum, Jira).</p>
     </section>
 
-    <section id="projects" class="mt-4">
-      <h2>Proyectos</h2>
-      <ul>
-        <li><a href="https://github.com/Alejandrobelvie/proyecto_eternial" target="_blank">Proyecto Eternial</a></li>
+    <section id="projects" class="section">
+      <h2><i class="bi bi-code-slash"></i> Proyectos</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto Eternial</h5>
+              <p class="card-text">Descripción breve del proyecto.</p>
+              <a href="https://github.com/Alejandrobelvie/proyecto_eternial" class="btn btn-custom" target="_blank">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
         <!-- Agrega más proyectos aquí -->
-      </ul>
+      </div>
     </section>
 
-    <section id="skills" class="mt-4">
-      <h2>Habilidades</h2>
-      <ul>
-        <li>Java, Python, HTML, CSS, Bootstrap</li>
-        <li>SQL Server, PostgreSQL</li>
-        <li>Git, GitHub</li>
-        <li>Scrum, Jira</li>
-        <li>Ciberseguridad</li>
-      </ul>
+    <section id="skills" class="section">
+      <h2><i class="bi bi-tools"></i> Habilidades</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Lenguajes y Frameworks</h5>
+          <span class="badge bg-primary me-2">Java</span>
+          <span class="badge bg-secondary me-2">Python</span>
+          <span class="badge bg-success me-2">HTML</span>
+          <span class="badge bg-danger me-2">CSS</span>
+          <span class="badge bg-warning me-2">Bootstrap</span>
+        </div>
+        <div class="col-md-6">
+          <h5>Bases de Datos y Herramientas</h5>
+          <span class="badge bg-info me-2">SQL Server</span>
+          <span class="badge bg-light text-dark me-2">PostgreSQL</span>
+          <span class="badge bg-dark me-2">Git</span>
+          <span class="badge bg-primary me-2">GitHub</span>
+          <span class="badge bg-success me-2">Scrum</span>
+          <span class="badge bg-warning me-2">Jira</span>
+          <span class="badge bg-danger me-2">Ciberseguridad</span>
+        </div>
+      </div>
     </section>
 
-    <section id="cv" class="mt-4">
-      <h2>Currículum</h2>
-      <a href="https://drive.google.com/file/d/1fJq79vg7vV4It3SyQC1Uumz4SrVxNwMH/view?usp=drivesdk" class="btn btn-primary" target="_blank">Descargar CV</a>
+    <section id="cv" class="section text-center">
+      <h2><i class="bi bi-file-earmark-person"></i> Currículum</h2>
+      <a href="https://drive.google.com/file/d/1fJq79vg7vV4It3SyQC1Uumz4SrVxNwMH/view?usp=drivesdk" class="btn btn-custom btn-lg" target="_blank">Descargar CV</a>
     </section>
 
-    <section id="contact" class="mt-4">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:areinoso547@gmail.com">tuemail@ejemplo.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/alejandro-belvie-54713530a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/tuusuario</a></p>
-      <p>GitHub: <a href="Https://github.com/Alejandrobelvie" target="_blank">github.com/tuusuario</a></p>
+    <section id="contact" class="section">
+      <h2><i class="bi bi-envelope"></i> Contacto</h2>
+      <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:areinoso547@gmail.com">areinoso547@gmail.com</a></p>
+      <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/alejandro-belvie-54713530a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/alejandro-belvie-54713530a</a></p>
+      <p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/Alejandrobelvie" target="_blank">github.com/Alejandrobelvie</a></p>
     </section>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Alejandro Belvie. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="mailto:areinoso547@gmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/alejandro-belvie-54713530a" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Alejandrobelvie" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add animation on scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
